@@ -38,6 +38,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Bg5
+    uniqueID: 4252709901
+    locked: 0
+  - name: Bg4
+    uniqueID: 21149369
+    locked: 0
+  - name: Bg3
+    uniqueID: 1443012223
+    locked: 0
+  - name: Bg2
+    uniqueID: 3022085015
+    locked: 0
+  - name: Bg1
+    uniqueID: 3039640265
+    locked: 0
   - name: Back
     uniqueID: 1419139211
     locked: 0

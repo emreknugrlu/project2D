@@ -1,0 +1,1259 @@
+fileFormatVersion: 2
+guid: 5496f8f2831d5bb44b8a000f9da41ecb
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Campfire_Frame_0
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 100
+      height: 100
+    spriteID: d1b7fa129c8a2c149b5afffddf35ccde
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Campfire_Frame_1
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 112
+      width: 100
+      height: 100
+    spriteID: 43d8c30886f079a4aa3a059c3cdcf999
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 112}
+  - name: Campfire_Frame_2
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 220
+      width: 100
+      height: 100
+    spriteID: da297300afe43a543abd9477cbf23518
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 220}
+  - name: Campfire_Frame_3
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 328
+      width: 100
+      height: 100
+    spriteID: 127b2d112dfb374429378b306cce0074
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 328}
+  - name: Campfire_Frame_4
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 436
+      width: 100
+      height: 100
+    spriteID: 98141e99df0f52a45ba16cfbca8e79f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 436}
+  - name: Campfire_Frame_5
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 544
+      width: 100
+      height: 100
+    spriteID: ca679642fc19243459d2cdd8ae75f7fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 544}
+  - name: Campfire_Frame_6
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 652
+      width: 100
+      height: 100
+    spriteID: a5398a97eaa5650469337a5e6c19fd83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 652}
+  - name: Campfire_Frame_7
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 760
+      width: 100
+      height: 100
+    spriteID: 2fb568084f5a741418bb52cae3d75aa0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 760}
+  - name: Campfire_Frame_8
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 868
+      width: 100
+      height: 100
+    spriteID: 0764c93e74070ee4896895008971f614
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 868}
+  - name: Campfire_Frame_9
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 4
+      width: 100
+      height: 100
+    spriteID: e60964eddda136e44929499181875c83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 4}
+  - name: Campfire_Frame_10
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 112
+      width: 100
+      height: 100
+    spriteID: d53f8069f615b76498d3f3e1bea2caba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 112}
+  - name: Campfire_Frame_11
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 220
+      width: 100
+      height: 100
+    spriteID: e246d68e826c39f41bdcd5f1728b83f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 220}
+  - name: Campfire_Frame_12
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 328
+      width: 100
+      height: 100
+    spriteID: 9d930081ed2e5a24880a1b151e0dffee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 328}
+  - name: Campfire_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 976
+      width: 32
+      height: 32
+    spriteID: ac5b5491a652ef843a8ef9d1fd951c31
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 976}
+  - name: Campfire_Frame_14
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 436
+      width: 100
+      height: 100
+    spriteID: d3d7bdda14bf6ae41bd9841adce3895e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 436}
+  - name: Campfire_Frame_15
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 544
+      width: 100
+      height: 100
+    spriteID: 84f7f1e4f86b5de419b5dca923f52ece
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 544}
+  - name: Campfire_Frame_16
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 652
+      width: 100
+      height: 100
+    spriteID: dc77c49332247f944b3a3f0e66e02f0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 652}
+  - name: Campfire_Frame_17
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 760
+      width: 100
+      height: 100
+    spriteID: 8d75d49e0d50ab24e936b036fdba2d0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 760}
+  - name: Campfire_Frame_18
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 112
+      y: 868
+      width: 100
+      height: 100
+    spriteID: 8b3c2473775560d40b875f3175b5870f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 112, y: 868}
+  - name: Campfire_Frame_19
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 4
+      width: 100
+      height: 100
+    spriteID: 813e6dccfe31d9d4390c1503eced08f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 4}
+  - name: Campfire_Frame_20
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 112
+      width: 100
+      height: 100
+    spriteID: fdcf459b42a4a4d4e8b490aec1fe3964
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 112}
+  - name: Campfire_Frame_21
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 220
+      width: 100
+      height: 100
+    spriteID: 98b7358e423877f429922e5a6bd8223b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 220}
+  - name: Campfire_Frame_22
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 328
+      width: 100
+      height: 100
+    spriteID: 3891aca51851d31439d709affdc85e7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 328}
+  - name: Campfire_Frame_23
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 436
+      width: 100
+      height: 100
+    spriteID: 5bf64283c0edfbc4080131822009cd05
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 436}
+  - name: Campfire_Frame_24
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 544
+      width: 100
+      height: 100
+    spriteID: 5ce7832a95130194bb5d8c674927cebc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 544}
+  - name: Campfire_Frame_25
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 652
+      width: 100
+      height: 100
+    spriteID: 7bb07f0f24477354483d49a29ea792af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 652}
+  - name: Campfire_Frame_26
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 760
+      width: 100
+      height: 100
+    spriteID: 0a6a760ac3717f24b8f83d90a74b58b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 760}
+  - name: Campfire_Frame_27
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 220
+      y: 868
+      width: 100
+      height: 100
+    spriteID: c6fb25f73cb81ee45844458e005762a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 220, y: 868}
+  - name: Campfire_Frame_28
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 4
+      width: 100
+      height: 100
+    spriteID: 150ba84e03a9d764da6f185f18be9b9e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 4}
+  - name: Campfire_Frame_29
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 112
+      width: 100
+      height: 100
+    spriteID: 781bb30319a5a31418fbbbf25bfb2a16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 112}
+  - name: Campfire_Frame_30
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 220
+      width: 100
+      height: 100
+    spriteID: ffb51b70fdc931c40bd9a3ac19f1cc61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 220}
+  - name: Campfire_Frame_31
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 328
+      width: 100
+      height: 100
+    spriteID: 8ce2d42830e314340b37638fa429e547
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 328}
+  - name: Campfire_Frame_32
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 436
+      width: 100
+      height: 100
+    spriteID: e4695965e882363448cb012c5101e28b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 436}
+  - name: Campfire_Frame_33
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 544
+      width: 100
+      height: 100
+    spriteID: 867c9504ffdd4d042b137e40fbb21771
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 544}
+  - name: Campfire_Frame_34
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 652
+      width: 100
+      height: 100
+    spriteID: 500946866d0a21244b12f7fac1c4c28d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 652}
+  - name: Campfire_Frame_35
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 760
+      width: 100
+      height: 100
+    spriteID: cbb928c84225ecd49b633ab4224b86a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 760}
+  - name: Campfire_Frame_36
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 328
+      y: 868
+      width: 100
+      height: 100
+    spriteID: 91450c05f1714fe47b0db0831753d145
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 328, y: 868}
+  - name: Campfire_Frame_37
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 436
+      y: 4
+      width: 100
+      height: 100
+    spriteID: e307cefa6cbd22c4c99c6165a3204af9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 436, y: 4}
+  - name: Campfire_Frame_38
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 436
+      y: 112
+      width: 100
+      height: 100
+    spriteID: 4448b716a1553144994c4143faf829c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 436, y: 112}
+  - name: Campfire_Frame_39
+    originalName: 
+    pivot: {x: 0.48999998, y: 0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 436
+      y: 220
+      width: 100
+      height: 100
+    spriteID: 996208ef4a6994c47ae2499e345fe58d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 436, y: 220}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -15356245
+    name: Campfire
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Campfire_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: d1b7fa129c8a2c149b5afffddf35ccde
+    - name: Campfire_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 43d8c30886f079a4aa3a059c3cdcf999
+    - name: Campfire_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: da297300afe43a543abd9477cbf23518
+    - name: Campfire_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 127b2d112dfb374429378b306cce0074
+    - name: Campfire_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 98141e99df0f52a45ba16cfbca8e79f7
+    - name: Campfire_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: ca679642fc19243459d2cdd8ae75f7fa
+    - name: Campfire_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: a5398a97eaa5650469337a5e6c19fd83
+    - name: Campfire_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 2fb568084f5a741418bb52cae3d75aa0
+    - name: Campfire_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 0764c93e74070ee4896895008971f614
+    - name: Campfire_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: e60964eddda136e44929499181875c83
+    - name: Campfire_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: d53f8069f615b76498d3f3e1bea2caba
+    - name: Campfire_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: e246d68e826c39f41bdcd5f1728b83f0
+    - name: Campfire_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 9d930081ed2e5a24880a1b151e0dffee
+    - name: Campfire_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      spriteId: ac5b5491a652ef843a8ef9d1fd951c31
+    - name: Campfire_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: d3d7bdda14bf6ae41bd9841adce3895e
+    - name: Campfire_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 84f7f1e4f86b5de419b5dca923f52ece
+    - name: Campfire_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: dc77c49332247f944b3a3f0e66e02f0d
+    - name: Campfire_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 8d75d49e0d50ab24e936b036fdba2d0c
+    - name: Campfire_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 8b3c2473775560d40b875f3175b5870f
+    - name: Campfire_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 813e6dccfe31d9d4390c1503eced08f9
+    - name: Campfire_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: fdcf459b42a4a4d4e8b490aec1fe3964
+    - name: Campfire_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 98b7358e423877f429922e5a6bd8223b
+    - name: Campfire_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 3891aca51851d31439d709affdc85e7d
+    - name: Campfire_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 5bf64283c0edfbc4080131822009cd05
+    - name: Campfire_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 5ce7832a95130194bb5d8c674927cebc
+    - name: Campfire_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 7bb07f0f24477354483d49a29ea792af
+    - name: Campfire_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 0a6a760ac3717f24b8f83d90a74b58b9
+    - name: Campfire_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: c6fb25f73cb81ee45844458e005762a9
+    - name: Campfire_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 150ba84e03a9d764da6f185f18be9b9e
+    - name: Campfire_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 781bb30319a5a31418fbbbf25bfb2a16
+    - name: Campfire_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: ffb51b70fdc931c40bd9a3ac19f1cc61
+    - name: Campfire_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 8ce2d42830e314340b37638fa429e547
+    - name: Campfire_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: e4695965e882363448cb012c5101e28b
+    - name: Campfire_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 867c9504ffdd4d042b137e40fbb21771
+    - name: Campfire_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 500946866d0a21244b12f7fac1c4c28d
+    - name: Campfire_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: cbb928c84225ecd49b633ab4224b86a0
+    - name: Campfire_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 91450c05f1714fe47b0db0831753d145
+    - name: Campfire_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: e307cefa6cbd22c4c99c6165a3204af9
+    - name: Campfire_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 4448b716a1553144994c4143faf829c1
+    - name: Campfire_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: -33
+        y: -25
+        width: 100
+        height: 100
+      spriteId: 996208ef4a6994c47ae2499e345fe58d
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}
