@@ -3,16 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Chest
+  tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Hider
+  - 
   - 
   - 
   - 
@@ -39,45 +38,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Bg5
-    uniqueID: 4252709901
-    locked: 0
-  - name: Bg4
-    uniqueID: 21149369
-    locked: 0
-  - name: Bg3
-    uniqueID: 1443012223
-    locked: 0
-  - name: Bg2
-    uniqueID: 3022085015
-    locked: 0
-  - name: Bg1
-    uniqueID: 3039640265
-    locked: 0
-  - name: Back
-    uniqueID: 1419139211
-    locked: 0
-  - name: MidBack
-    uniqueID: 252714349
-    locked: 0
-  - name: BMisc
-    uniqueID: 1560050301
-    locked: 0
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: FMisc
-    uniqueID: 3830449447
-    locked: 0
-  - name: Ground
-    uniqueID: 216515879
-    locked: 0
-  - name: ForeGround
-    uniqueID: 1717806065
-    locked: 0
-  - name: MidFront
-    uniqueID: 3636546833
-    locked: 0
-  - name: Front
-    uniqueID: 243403487
     locked: 0
