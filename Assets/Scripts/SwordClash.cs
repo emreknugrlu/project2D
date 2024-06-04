@@ -17,7 +17,7 @@ public class SwordClash : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int annen = 13;
+        int annen = 31;
         swordPosition = sword.position;
         float bob1 = Input.GetAxis("Horizontal");
         swordPosition.x += bob1*Time.deltaTime;
