@@ -39,6 +39,45 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG5
+    uniqueID: 2412571291
+    locked: 0
+  - name: BG4
+    uniqueID: 3874992995
+    locked: 0
+  - name: BG3
+    uniqueID: 2790802223
+    locked: 0
+  - name: BG2
+    uniqueID: 4067566253
+    locked: 0
+  - name: BG1
+    uniqueID: 961587725
+    locked: 0
+  - name: Back
+    uniqueID: 1358728975
+    locked: 0
+  - name: MidBack
+    uniqueID: 642525767
+    locked: 0
+  - name: BackMisc
+    uniqueID: 1874271823
+    locked: 0
+  - name: Ground
+    uniqueID: 3930933229
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3343640925
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: FrontMisc
+    uniqueID: 3666394349
+    locked: 0
+  - name: MidFront
+    uniqueID: 4223148337
+    locked: 0
+  - name: Front
+    uniqueID: 3896349035
     locked: 0
