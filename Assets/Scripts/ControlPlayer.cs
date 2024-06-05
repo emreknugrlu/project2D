@@ -32,10 +32,7 @@ public class ControlPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
-
-        horizontalAxis = Input.GetAxis("Horizontal");
+        horizontalAxis = Input.GetAxisRaw("Horizontal");
 
         jumpKey = Input.GetKeyDown(KeyCode.W);
 
@@ -62,7 +59,7 @@ public class ControlPlayer : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new(horizontalAxis * moveSpeed, rb.velocity.y);
+        rb.velocity = new Vector2(horizontalAxis * moveSpeed, rb.velocity.y);
         onGround = groundDetector.IsTouchingLayers(LayerMask.GetMask("Ground"));
 
         if (onGround)

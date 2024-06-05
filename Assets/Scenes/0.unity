@@ -1077,7 +1077,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0
-  far clip plane: 153.8
+  far clip plane: 152
   field of view: 60
   orthographic: 1
   orthographic size: 5
@@ -3630,9 +3630,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1040953099}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9ae341d76925144daf71231219bb380, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c757958fe7b7842a60a46d52e1b8f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onGround: 0
+  moveSpeed: 5
+  jumpSpeed: 3.2
+  playerStates: 0
+  idleAnimSpeed: 0.12
+  runAnimSpeed: 0.12
+  jumpAnimSpeed: 0.12
+  fallAnimSpeed: 0.12
+  rb: {fileID: 1040953100}
+  groundDetector: {fileID: 617485073}
+  animator: {fileID: 0}
 --- !u!212 &1040953103
 SpriteRenderer:
   m_ObjectHideFlags: 0
