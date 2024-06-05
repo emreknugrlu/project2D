@@ -11,6 +11,8 @@ public class EnemyPatrol : MonoBehaviour
     private Transform currentPoint;
     public float speed = 2f;
     private bool playerInPatrolArea = false;
+    public float upperYAxisTolerance = 3.0f; // Tolerance for upper y-axis
+    public float lowerYAxisTolerance = 0.5f; // Tolerance for lower y-axis
 
     void Start()
     {
@@ -27,7 +29,7 @@ public class EnemyPatrol : MonoBehaviour
 
         if (playerInPatrolArea)
         {
-            // Move towards the player
+            // Move towards the player, but keep the y velocity unchanged
             Vector2 direction = (player.transform.position - transform.position).normalized;
             rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
         }
@@ -70,8 +72,10 @@ public class EnemyPatrol : MonoBehaviour
         float minX = Mathf.Min(pointA.transform.position.x, pointB.transform.position.x);
         float maxX = Mathf.Max(pointA.transform.position.x, pointB.transform.position.x);
         float playerX = player.transform.position.x;
+        float playerY = player.transform.position.y;
+        float enemyY = transform.position.y;
 
-        return playerX > minX && playerX < maxX;
+        return playerX > minX && playerX < maxX && playerY <= enemyY + upperYAxisTolerance && playerY >= enemyY - lowerYAxisTolerance;
     }
 
     private void OnDrawGizmos()
