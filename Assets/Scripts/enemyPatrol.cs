@@ -11,7 +11,7 @@ public class EnemyPatrol : MonoBehaviour
     private Transform currentPoint;
     public float speed = 2f;
     private bool playerInPatrolArea = false;
-    public float upperYAxisTolerance = 3.0f; // Tolerance for upper y-axis
+    public float upperYAxisTolerance = 4.0f; // Tolerance for upper y-axis
     public float lowerYAxisTolerance = 0.5f; // Tolerance for lower y-axis
 
     void Start()
@@ -29,9 +29,9 @@ public class EnemyPatrol : MonoBehaviour
 
         if (playerInPatrolArea)
         {
-            // Move towards the player, but keep the y velocity unchanged
-            Vector2 direction = (player.transform.position - transform.position).normalized;
-            rb.velocity = new Vector2(direction.x * speed, rb.velocity.y);
+            // Move towards the player on the x-axis only
+            float direction = Mathf.Sign(player.transform.position.x - transform.position.x);
+            rb.velocity = new Vector2(direction * speed, rb.velocity.y);
         }
         else
         {
