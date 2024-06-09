@@ -404,10 +404,10 @@ MonoBehaviour:
   moveSpeed: 8
   jumpSpeed: 23
   playerStates: 1
-  idleAnimSpeed: 0.12
-  runAnimSpeed: 0.12
-  jumpAnimSpeed: 0.12
-  fallAnimSpeed: 0.12
+  idleAnimSpeed: 1
+  runAnimSpeed: 1
+  jumpAnimSpeed: 1
+  fallAnimSpeed: 1
   rb: {fileID: 1183522893}
   groundDetector: {fileID: 481642142}
   animator: {fileID: 1183522892}
@@ -565,7 +565,7 @@ Transform:
   m_GameObject: {fileID: 1183522889}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3, y: 0.92, z: 0}
+  m_LocalPosition: {x: 2.21, y: -0.52, z: 0}
   m_LocalScale: {x: 2.27, y: 2.27, z: 2.27}
   m_ConstrainProportionsScale: 1
   m_Children:
