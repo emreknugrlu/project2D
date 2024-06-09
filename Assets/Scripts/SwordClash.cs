@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class SwordClash : MonoBehaviour
 {
-[SerializeField] Transform sword;
+    [SerializeField] RectTransform sword;
     private Vector2 position;
-
     private Vector2 swordPosition;
     // Start is called before the first frame update
     void Start()
