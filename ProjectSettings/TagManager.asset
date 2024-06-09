@@ -66,11 +66,11 @@ TagManager:
   - name: Ground
     uniqueID: 3930933229
     locked: 0
-  - name: ForeGround
-    uniqueID: 3343640925
-    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ForeGround
+    uniqueID: 3343640925
     locked: 0
   - name: FrontMisc
     uniqueID: 3666394349
