@@ -12,15 +12,16 @@ public class ControlPlayer : MonoBehaviour
 
 
     [Header("Movement Values")]
-    public float moveSpeed = 1f;
-    public float jumpSpeed = 3.2f;
+    public float moveSpeed = 5.5f;
+    public float jumpSpeed = 8.25f;
     [Space(4)]
     [Header("Animation values")]
     public PlayerStates playerStates = PlayerStates.Idle;
-    [SerializeField] float idleAnimSpeed = .12f;
-    [SerializeField] float runAnimSpeed = .12f;
-    [SerializeField] float jumpAnimSpeed = .12f;
-    [SerializeField] float fallAnimSpeed = .12f;
+    [SerializeField] float idleAnimSpeed = 1f;
+    [SerializeField] float runAnimSpeed = 1f;
+    [SerializeField] float jumpAnimSpeed = 1f;
+    [SerializeField] float fallAnimSpeed = 1f;
+    [SerializeField] float attackAnimSpeed = 1f;
 
     [Space(4)]
     [Header("Components")]
@@ -49,12 +50,15 @@ public class ControlPlayer : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
         }
+
+        
     }
     const string IDLE = "Idle";
     const string WALK = "Walk";
     const string RUN = "Run";
     const string JUMP = "Jump";
     const string FALL = "Fall";
+    const string ATTACK = "Attack";
 
 
     private void FixedUpdate()
@@ -62,7 +66,13 @@ public class ControlPlayer : MonoBehaviour
         rb.velocity = new Vector2(horizontalAxis * moveSpeed, rb.velocity.y);
         onGround = groundDetector.IsTouchingLayers(LayerMask.GetMask("Ground"));
 
-        if (onGround)
+        if (PlayerAttack.attacking)
+        {
+            playerStates = PlayerStates.Attack;
+            ChangeAnimationState(ATTACK, attackAnimSpeed);
+        }
+            
+        else if (onGround)
         {
             if (Mathf.Abs(rb.velocity.x) < Mathf.Epsilon)
             {
@@ -105,5 +115,6 @@ public class ControlPlayer : MonoBehaviour
         Run,
         Jump,
         Dead,
+        Attack,
     }
 }

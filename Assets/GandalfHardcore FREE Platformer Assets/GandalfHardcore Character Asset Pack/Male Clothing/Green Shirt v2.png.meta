@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,7 +95,952 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Green Shirt v2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5973e0ae776065642a0f4b019302b08e
+      internalID: 1559544613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a50d399706656547a180e88fa52f39f
+      internalID: -2033617344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e099708ca1335e4a9cd327def6aabfd
+      internalID: 1651866608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8a735e36e72fd4594cde23a7af8ad0
+      internalID: -1573897994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 384
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1415053ec9c495248a605159aca5775a
+      internalID: 1712449787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7aca814e7be32f46af67bc60e0c23b7
+      internalID: -906322545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f405d2c26ad44134b898729c59670bf1
+      internalID: -2017471113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_7
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94b5cf76e26d6cb4a98c516834570c0d
+      internalID: -1536742590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23bb27f506568b4478dbd6d18fcc082e
+      internalID: -566543783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_9
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70e85c1c993ccd4c82e0e6094b1c90a
+      internalID: 1053370843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b33f6590d299546819464a0dbcd1ec
+      internalID: 1379649072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_11
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e945dc0f9c5848469e21700184081ac
+      internalID: 634778459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_12
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 320
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21265da746b02d044914ed225553d0b9
+      internalID: 904558447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b27ce888155210f4ab7cf54231ebe5dc
+      internalID: 1021674175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 554f0f1cfe4b9ae44949afff0196ded3
+      internalID: -1315220966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_15
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045bd7a45a6c9b942a6b986910dcc31e
+      internalID: -1207367898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_16
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9ec6e169db1e8a4fb1b8cb88b0219dd
+      internalID: 1461173601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_17
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cfd9b806fd6ecf42a2809b2cb014848
+      internalID: -649240092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_18
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4aab66519950e428b566f4a8371c5e
+      internalID: -1379601571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_19
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b385593dfa59afc4e8db84de3ef00eb4
+      internalID: 836057189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_20
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 256
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c9641ee05c6d14d81bbe4c747b7477
+      internalID: 1483316730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee74f5f33c702de48ab92bb0dff45036
+      internalID: 1237095384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_22
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8a46314a8859945ad8c70ec29185bd
+      internalID: 976328975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17cc4fbc07ec0c144bb60b93c211a528
+      internalID: 1499552917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_24
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54142ca713c8ab418023b51f3258f39
+      internalID: -1055860269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f0d382a39745146a60cd6020146617
+      internalID: 1828189215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_26
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f15f0170cafa8f4ba218948a97061fc
+      internalID: 2043125683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_27
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b53f541913102340946a1289c9e0b36
+      internalID: -1032530616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_28
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 128
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2868f6211b691ed46a0c8d8e1c244d0b
+      internalID: -906358220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65df4fa2cf125ba419fb27ac59a64482
+      internalID: 1158171834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_30
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6604dc029717464db3bcbd43ccee76b
+      internalID: 1211311210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_31
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be12bf9428a5baf4db3e355d88f704d3
+      internalID: 91684396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_32
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 983d858226a02ba469f18c4cc86e482e
+      internalID: 1982998293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e548ca14a758649a63e712f32bbbfa
+      internalID: -1510068617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 64
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ea5c17284cb8eb4ab31f53498ef70f2
+      internalID: -1494000128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c7ec631657a1ad4294ce0a8ab043c15
+      internalID: -1188685653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_36
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fde92c1b41ffa7479af93ec257fe31e
+      internalID: 1893051117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_37
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7daffe6078ee8d843827ce055dc257fe
+      internalID: -1116917722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_38
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2815d176f5ae66e41ab27a8c721b3cf4
+      internalID: -483529081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_39
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbfa9644f86b904086de36ae0f594a7
+      internalID: -1341608189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_40
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa8aab3062e3ed84a81635b1d4def081
+      internalID: -1292728981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_41
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8f351a61884b64a850d2a05b3f4b82
+      internalID: -1617823655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_42
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ea63e0b2f76e945a64b2eb458aa35b
+      internalID: 1859632804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_43
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64aced976abaf344bb42e0fdfd0afadc
+      internalID: 958796872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green Shirt v2_44
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 80
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a940da55b5cac774caf987f85d8e5140
+      internalID: 1262520656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +1051,52 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Green Shirt v2_0: 1559544613
+      Green Shirt v2_1: -2033617344
+      Green Shirt v2_10: 1379649072
+      Green Shirt v2_11: 634778459
+      Green Shirt v2_12: 904558447
+      Green Shirt v2_13: 1021674175
+      Green Shirt v2_14: -1315220966
+      Green Shirt v2_15: -1207367898
+      Green Shirt v2_16: 1461173601
+      Green Shirt v2_17: -649240092
+      Green Shirt v2_18: -1379601571
+      Green Shirt v2_19: 836057189
+      Green Shirt v2_2: 1651866608
+      Green Shirt v2_20: 1483316730
+      Green Shirt v2_21: 1237095384
+      Green Shirt v2_22: 976328975
+      Green Shirt v2_23: 1499552917
+      Green Shirt v2_24: -1055860269
+      Green Shirt v2_25: 1828189215
+      Green Shirt v2_26: 2043125683
+      Green Shirt v2_27: -1032530616
+      Green Shirt v2_28: -906358220
+      Green Shirt v2_29: 1158171834
+      Green Shirt v2_3: -1573897994
+      Green Shirt v2_30: 1211311210
+      Green Shirt v2_31: 91684396
+      Green Shirt v2_32: 1982998293
+      Green Shirt v2_33: -1510068617
+      Green Shirt v2_34: -1494000128
+      Green Shirt v2_35: -1188685653
+      Green Shirt v2_36: 1893051117
+      Green Shirt v2_37: -1116917722
+      Green Shirt v2_38: -483529081
+      Green Shirt v2_39: -1341608189
+      Green Shirt v2_4: 1712449787
+      Green Shirt v2_40: -1292728981
+      Green Shirt v2_41: -1617823655
+      Green Shirt v2_42: 1859632804
+      Green Shirt v2_43: 958796872
+      Green Shirt v2_44: 1262520656
+      Green Shirt v2_5: -906322545
+      Green Shirt v2_6: -2017471113
+      Green Shirt v2_7: -1536742590
+      Green Shirt v2_8: -566543783
+      Green Shirt v2_9: 1053370843
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
