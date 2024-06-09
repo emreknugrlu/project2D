@@ -4,15 +4,44 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
+    private GameObject attackArea = default;
+
+    public static bool attacking = false;
+
+    [SerializeField] float timeToAttack = 0.65f;
+    private float timer = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        attackArea = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Attack();
+        }
+
+        if (attacking)
+        {
+            timer += Time.deltaTime;
+
+            if (timer >= timeToAttack)
+            {
+                timer = 0;
+                attacking = false;
+                attackArea.SetActive(attacking);
+            }
+
+        }
+    }
+
+    public void Attack()
+    {
+        attacking = true;
+        attackArea.SetActive(attacking);
     }
 }
