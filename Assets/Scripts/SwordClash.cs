@@ -32,20 +32,28 @@ public class SwordClash : MonoBehaviour
     void Update()
     {
         currentDistance = sword.position.x - midPosition.x;
-        if (currentDistance < -150f || currentDistance > 150f)
+        if (Mathf.Abs(currentDistance)>=150f)
         {
-            Debug.Log("Oyunu Kaybettin");
-            this.enabled = false;
-            return;
+            GameOver(false);
         }
-
         if (slider.value > 0.999f)
         {
-            Debug.Log("Oyunu Kazandýn");
-            this.enabled = false;
-            return;
+            GameOver(true);
         }
+        
+        
+        
+        float toMoveAbs =Mathf.Sqrt(Mathf.Abs(currentDistance)) * Time.deltaTime * clashDifficulty ;
+        //toMoveAbs = Mathf.Clamp(toMoveAbs, 0.05f, 5);
+        float toMove = toMoveAbs * Mathf.Sign(currentDistance);
+
+        if (Mathf.Abs(currentDistance) < greenLength / 2)
+            slider.value += sliderPower * Time.deltaTime;
+        else
+            slider.value -= 2 * sliderPower * Time.deltaTime;
             
+        sword.Translate(toMove, 0f, 0f,greenArea);
+        
         
         
         float bob1 = 0;
@@ -53,29 +61,24 @@ public class SwordClash : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D)) bob1 = 1;
         sword.Translate(bob1 * Time.deltaTime * 1000* playerPower, 0f, 0f,greenArea);
 
-        
 
-        float toMoveAbs =Mathf.Sqrt(Mathf.Abs(currentDistance)) * Time.deltaTime * clashDifficulty ;
-        float direciton = currentDistance / Mathf.Abs(currentDistance);
-        Debug.Log(toMoveAbs);
-        //toMoveAbs = Mathf.Clamp(toMoveAbs, 0.05f, 5);
-        float toMove = toMoveAbs * direciton;
-
-        if (Mathf.Abs(currentDistance) < greenLength / 2)
-            slider.value += sliderPower * Time.deltaTime;
-        else
-            slider.value -= 2 * sliderPower * Time.deltaTime;
-
-
-        
-        sword.Translate(toMove, 0f, 0f,greenArea);
-        
-        
         currentDistance =Mathf.Clamp(currentDistance, -150, 150);
         sword.position.Set(currentDistance, 0f, 0f);
+        
+    }
 
 
-
-
+    void GameOver(bool win)
+    {
+        if (win)
+        {
+            gameObject.SetActive(false);
+            Debug.Log("Oyunu Kazandýn");
+        }
+        else
+        {
+            gameObject.SetActive(false);
+            Debug.Log("Oyunu Kaybettin");
+        }
     }
 }
