@@ -22,6 +22,8 @@ public class PlayerRespawn : MonoBehaviour
     {
         if (latestCheckpoint != null)
         {
+            Rigidbody2D rb = transform.GetComponent<Rigidbody2D>();
+            rb.velocity = Vector2.zero;
             transform.position = latestCheckpoint.position;
             Debug.Log("Player respawned at: " + latestCheckpoint.position);
         }
