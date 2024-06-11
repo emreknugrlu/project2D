@@ -1,47 +1,136 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private GameObject attackArea = default;
+    private GameObject attackArea;
 
-    public static bool attacking = false;
+    public bool attacking = false;
+    public bool blocking = false;
+    public bool parrying = false;
 
-    [SerializeField] float timeToAttack = 0.65f;
-    private float timer = 0f;
+    [SerializeField] private float timeToAttack = 0.65f;
+    private float attackTimer = 0f;
+
+    [SerializeField] private float parryWindow = 0.5f; // Parry window is 0.5 seconds
+    private float parryTimer = 0f;
+
+    private HealthAndPosture healthAndPosture;
 
     // Start is called before the first frame update
     void Start()
     {
         attackArea = transform.GetChild(0).gameObject;
+        attackArea.SetActive(false); // Ensure the attack area is initially inactive
+
+        // Get the HealthAndPosture component from the current game object
+        healthAndPosture = GetComponent<HealthAndPosture>();
+
+        if (healthAndPosture == null)
+        {
+            Debug.LogError("HealthAndPosture component is missing!");
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        // Attack action
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Attack();
         }
 
+        // Block action
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            StartBlocking();
+        }
+
+        // Check if the player is still holding the block key
+        if (blocking && Input.GetKey(KeyCode.LeftControl))
+        {
+            HandleBlocking();
+        }
+        else if (blocking && Input.GetKeyUp(KeyCode.LeftControl))
+        {
+            EndBlocking();
+        }
+
+        // Handle the attacking state
         if (attacking)
         {
-            timer += Time.deltaTime;
+            attackTimer += Time.deltaTime;
 
-            if (timer >= timeToAttack)
+            if (attackTimer >= timeToAttack)
             {
-                timer = 0;
-                attacking = false;
-                attackArea.SetActive(attacking);
+                EndAttack();
             }
-
         }
     }
 
     public void Attack()
     {
-        attacking = true;
-        attackArea.SetActive(attacking);
+        if (!attacking && !blocking && !parrying)
+        {
+            attacking = true;
+            attackArea.SetActive(true); // Activate the attack area
+
+            // Reset timers
+            attackTimer = 0f;
+        }
+    }
+
+    private void EndAttack()
+    {
+        attacking = false;
+        attackArea.SetActive(false); // Deactivate the attack area
+
+        // Reset attack timer
+        attackTimer = 0f;
+    }
+
+    private void StartBlocking()
+    {
+        if (!attacking)
+        {
+            blocking = true;
+            parrying = true; // Parrying is initially true
+
+            // Link blocking state with the HealthAndPosture component
+            healthAndPosture.blocking = true;
+            healthAndPosture.parrying = true;
+
+            // Reset parry timer
+            parryTimer = 0f;
+        }
+    }
+
+    private void HandleBlocking()
+    {
+        if (parrying)
+        {
+            parryTimer += Time.deltaTime;
+
+            // End the parry state after the parry window
+            if (parryTimer >= parryWindow)
+            {
+                parrying = false;
+                healthAndPosture.parrying = false;
+            }
+        }
+    }
+
+    private void EndBlocking()
+    {
+        blocking = false;
+        parrying = false; // Ensure parry is false when blocking ends
+
+        // Reset block and parry states in HealthAndPosture
+        healthAndPosture.blocking = false;
+        healthAndPosture.parrying = false;
+
+        // Reset parry timer
+        parryTimer = 0f;
     }
 }

@@ -4,14 +4,23 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
-    private int damage = 3;
+    private int damage = 25;
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.GetComponent<Health>() != null)
+        HealthAndPosture target = collider.GetComponent<HealthAndPosture>();
+
+        if (target != null)
         {
-            Health health = collider.GetComponent<Health>();
-            health.Damage(damage);
+            // Check if the target is not blocking or parrying
+            if (!target.IsBlockingOrParrying())
+            {
+                target.Damage(damage);
+            }
+            else
+            {
+                Debug.Log("Attack blocked or parried!");
+            }
         }
     }
 }
