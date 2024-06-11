@@ -377,6 +377,10 @@ MonoBehaviour:
   jumpAnimSpeed: 1
   fallAnimSpeed: 1
   attackAnimSpeed: 1
+  brokenPostureAnimSpeed: 1
+  stunnedAnimSpeed: 1
+  blockingAnimSpeed: 1
+  gotParriedAnimSpeed: 1
   rb: {fileID: 3192982138860410949}
   groundDetector: {fileID: 5593025840056013700}
   animator: {fileID: 1952806806933224191}
@@ -405,6 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToAttack: 0.6
+  parryWindow: 0.65
 --- !u!114 &1242366003307186905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,3 +423,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  posture: 0
