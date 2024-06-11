@@ -158,6 +158,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   posture: 0
+  freezeDuration: 3
+  blocking: 0
+  parrying: 0
 --- !u!95 &25359925
 Animator:
   serializedVersion: 5
@@ -2705,6 +2708,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1242366003307186905, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
+      propertyPath: freezeDuration
+      value: 1.53
+      objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.9
@@ -2748,6 +2755,10 @@ PrefabInstance:
     - target: {fileID: 7365066333158571105, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100726896887813301, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
+      propertyPath: parryWindow
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
