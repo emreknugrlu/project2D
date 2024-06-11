@@ -6,11 +6,11 @@ public class Checkpoint : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
             PlayerRespawn playerRespawn = other.GetComponent<PlayerRespawn>();
             if (playerRespawn != null)
             {
                 playerRespawn.SetCheckpoint(transform.parent.transform);
-                transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
             }
         }
     }
