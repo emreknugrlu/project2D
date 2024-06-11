@@ -8,6 +8,13 @@ public class NewSceneLoader : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        if (other.CompareTag("Player"))
+        {
+            LoadNextScene();
+        }
+    }
+    void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
