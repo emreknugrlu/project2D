@@ -9,7 +9,8 @@ public class Checkpoint : MonoBehaviour
             PlayerRespawn playerRespawn = other.GetComponent<PlayerRespawn>();
             if (playerRespawn != null)
             {
-                playerRespawn.SetCheckpoint(transform);
+                playerRespawn.SetCheckpoint(transform.parent.transform);
+                transform.GetChild(0).GetComponent<SpriteRenderer>().enabled = true;
             }
         }
     }

@@ -73,7 +73,7 @@ public class SwordClash : MonoBehaviour
         if (win)
         {
             gameObject.SetActive(false);
-            Debug.Log("Oyunu Kazandýn");
+            Debug.Log("Oyunu KazandÄ±n");
         }
         else
         {
