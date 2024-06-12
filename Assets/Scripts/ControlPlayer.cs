@@ -117,4 +117,8 @@ public class ControlPlayer : MonoBehaviour
         Dead,
         Attack,
     }
+    public string GetAttackAnimationName()
+    {
+        return ATTACK;
+    }
 }
