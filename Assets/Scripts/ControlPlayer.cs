@@ -31,6 +31,14 @@ public class ControlPlayer : MonoBehaviour
 
     private PlayerAttack playerAttack;
     private HealthAndPosture healthAndPosture;
+    private bool wasOnGround = false;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -63,6 +71,26 @@ public class ControlPlayer : MonoBehaviour
         rb.velocity = new Vector2(horizontalAxis * moveSpeed, rb.velocity.y);
         onGround = groundDetector.IsTouchingLayers(LayerMask.GetMask("Ground"));
 
+        // Sound Effects
+        if (!wasOnGround && onGround)
+        {
+            audioManager.PlaySFX("land"); // Use string "land"
+        }
+        else if (onGround && jumpKey)
+        {
+            audioManager.PlaySFX("jump");
+        }
+        else if (!onGround && rb.velocity.y < 0)
+        {
+            audioManager.PlaySFX("fall");
+        }
+        else if (onGround && Mathf.Abs(rb.velocity.x) > Mathf.Epsilon) // Walking
+        {
+            audioManager.PlaySFX("walk");
+        }
+
+        wasOnGround = onGround; // Update wasOnGround for next frame
+
         if (HealthAndPosture.isPostureBroken)
         {
             playerStates = PlayerStates.BrokenPosture;
@@ -82,11 +110,13 @@ public class ControlPlayer : MonoBehaviour
         {
             playerStates = PlayerStates.Blocking;
             ChangeAnimationState("Blocking", blockingAnimSpeed);
+            audioManager.PlaySFX("block");
         }
         else if (playerAttack.attacking)
         {
             playerStates = PlayerStates.Attack;
             ChangeAnimationState("Attack", attackAnimSpeed);
+            audioManager.PlaySFX("attack");
         }
         else if (onGround)
         {
