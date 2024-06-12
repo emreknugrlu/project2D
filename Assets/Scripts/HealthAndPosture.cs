@@ -8,13 +8,18 @@ public class HealthAndPosture : MonoBehaviour
 
     [Header("Posture Settings")]
     [SerializeField] private int posture = 0;
-    [SerializeField] private float freezeDuration = 3.0f; // Duration to freeze the enemy
+    [SerializeField] private float parriedDuration = 0.2f;
+    [SerializeField] private float damageDuration = 0.6f;
+    [SerializeField] private float freezeDuration = 3.0f;// Duration to freeze the enemy
     private int MAX_POSTURE = 100;
     public static bool isPostureBroken = false;
     public static bool isStunned = false;
     public static bool gotParried = false;
+    public static bool die = false;
+    public static bool takeDamage = false;
 
     private Rigidbody2D rb2D; // Assuming 2D, adjust if using 3D
+    private Animator animator; // Animator component
 
     [Header("State Settings")]
     public bool blocking = false;
@@ -23,6 +28,12 @@ public class HealthAndPosture : MonoBehaviour
     void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+
+        if (animator == null)
+        {
+            Debug.LogError("Animator component is missing!");
+        }
     }
 
     void Update()
@@ -57,6 +68,13 @@ public class HealthAndPosture : MonoBehaviour
         }
 
         health -= amount;
+        takeDamage = true;
+        StartCoroutine(DamageRecovery());
+
+        if (animator != null)
+        {
+            animator.SetTrigger("TakeDamage"); // Play damage animation
+        }
 
         if (health <= 0)
         {
@@ -84,12 +102,17 @@ public class HealthAndPosture : MonoBehaviour
     public void GetParried()
     {
         gotParried = true;
+        takeDamage = true;
+        StartCoroutine(DamageRecovery());
         TakePostureDamage(20);
     }
 
     public void TakePostureDamage(int amount)
     {
         if (isPostureBroken) return; // Prevent additional posture damage when broken
+
+        takeDamage = true;
+        StartCoroutine(DamageRecovery());
 
         posture += amount;
 
@@ -146,14 +169,34 @@ public class HealthAndPosture : MonoBehaviour
         }
 
         isStunned = false;
+        isPostureBroken = false; // Reset posture broken state
 
         Debug.Log("Stun ended");
+    }
+
+    private IEnumerator DamageRecovery()
+    {
+        yield return new WaitForSeconds(damageDuration);
+
+        takeDamage = false;
+        Debug.Log("takeDamage ended");
+    }
+
+    private IEnumerator ParryRecovery()
+    {
+        yield return new WaitForSeconds(parriedDuration);
+
+        gotParried = false;
+
+        Debug.Log("isParried ended");
     }
 
     private void Die()
     {
         Debug.Log("I am Dead!");
-        Destroy(gameObject);
+        die = true;
+
+        Destroy(gameObject, 2.0f); // Delay to allow death animation
     }
 
     // Method to check if the player is blocking or parrying

@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerAttack : MonoBehaviour
 {
     private GameObject attackArea;
+    private GameObject blockShield;
 
     public bool attacking = false;
     public bool blocking = false;
@@ -22,6 +23,9 @@ public class PlayerAttack : MonoBehaviour
     {
         attackArea = transform.GetChild(0).gameObject;
         attackArea.SetActive(false); // Ensure the attack area is initially inactive
+
+        blockShield = transform.GetChild(1).gameObject;
+        blockShield.SetActive(false);
 
         // Get the HealthAndPosture component from the current game object
         healthAndPosture = GetComponent<HealthAndPosture>();
@@ -95,6 +99,7 @@ public class PlayerAttack : MonoBehaviour
         if (!attacking)
         {
             blocking = true;
+            blockShield.SetActive(true);
             parrying = true; // Parrying is initially true
 
             // Link blocking state with the HealthAndPosture component
@@ -124,6 +129,7 @@ public class PlayerAttack : MonoBehaviour
     private void EndBlocking()
     {
         blocking = false;
+        blockShield.SetActive(false);
         parrying = false; // Ensure parry is false when blocking ends
 
         // Reset block and parry states in HealthAndPosture
@@ -132,5 +138,18 @@ public class PlayerAttack : MonoBehaviour
 
         // Reset parry timer
         parryTimer = 0f;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (parrying && collision.CompareTag("Enemy"))
+        {
+            // Assuming the enemy has a HealthAndPosture component
+            HealthAndPosture enemyHealthAndPosture = collision.GetComponent<HealthAndPosture>();
+            if (enemyHealthAndPosture != null)
+            {
+                enemyHealthAndPosture.GetParried();
+            }
+        }
     }
 }

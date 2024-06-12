@@ -23,6 +23,8 @@ public class ControlPlayer : MonoBehaviour
     [SerializeField] private float stunnedAnimSpeed = 1f;
     [SerializeField] private float blockingAnimSpeed = 1f;
     [SerializeField] private float gotParriedAnimSpeed = 1f;
+    [SerializeField] private float dieAnimSpeed = 1f;
+    [SerializeField] private float takeDamageAnimSpeed = 1f;
 
     [Header("Components")]
     public Rigidbody2D rb;
@@ -73,11 +75,25 @@ public class ControlPlayer : MonoBehaviour
             playerStates = PlayerStates.GotParried;
             ChangeAnimationState("GotParried", gotParriedAnimSpeed);
         }
+
+        else if (HealthAndPosture.die)
+        {
+            playerStates = PlayerStates.Die;
+            ChangeAnimationState("Die", dieAnimSpeed);
+        }
+
         else if (HealthAndPosture.isStunned)
         {
             playerStates = PlayerStates.Stunned;
             ChangeAnimationState("Stunned", stunnedAnimSpeed);
         }
+
+        else if (HealthAndPosture.takeDamage)
+        {
+            playerStates = PlayerStates.TakeDamage;
+            ChangeAnimationState("TakeDamage", takeDamageAnimSpeed);
+        }
+
         else if (playerAttack.blocking)
         {
             playerStates = PlayerStates.Blocking;
@@ -135,5 +151,7 @@ public class ControlPlayer : MonoBehaviour
         GotParried,
         Stunned,
         Blocking,
+        Die,
+        TakeDamage,
     }
 }
