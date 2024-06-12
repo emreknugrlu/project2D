@@ -1,5 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!1102 &-7841335016273346728
 AnimatorState:
   serializedVersion: 6
@@ -26,6 +27,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> parent of 7f9e7d0 (EnemyScript)
 --- !u!1102 &-6327830074252844112
 AnimatorState:
   serializedVersion: 6
@@ -52,6 +55,7 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+<<<<<<< HEAD
 --- !u!1102 &-5445764348828792564
 AnimatorState:
   serializedVersion: 6
@@ -78,6 +82,8 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+=======
+>>>>>>> parent of 7f9e7d0 (EnemyScript)
 --- !u!1102 &-5283729236256024374
 AnimatorState:
   serializedVersion: 6
@@ -182,6 +188,7 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 4237214616534170125}
     m_Position: {x: 190, y: 480, z: 0}
+<<<<<<< HEAD
   - serializedVersion: 1
     m_State: {fileID: -5445764348828792564}
     m_Position: {x: 190, y: 540, z: 0}
@@ -194,6 +201,8 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 1716359107974564779}
     m_Position: {x: 295, y: 735, z: 0}
+=======
+>>>>>>> parent of 7f9e7d0 (EnemyScript)
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
