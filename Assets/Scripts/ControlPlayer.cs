@@ -136,4 +136,8 @@ public class ControlPlayer : MonoBehaviour
         Stunned,
         Blocking,
     }
+    public string GetAttackAnimationName()
+    {
+        return ATTACK;
+    }
 }
