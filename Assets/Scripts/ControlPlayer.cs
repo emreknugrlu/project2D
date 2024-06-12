@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ControlPlayer : MonoBehaviour
 {
-    float horizontalAxis = 0;
+    private float horizontalAxis = 0;
     private bool jumpKey = false;
     public bool onGround = false;
 
@@ -12,7 +12,7 @@ public class ControlPlayer : MonoBehaviour
     public float moveSpeed = 5.5f;
     public float jumpSpeed = 8.25f;
 
-    [Header("Animation values")]
+    [Header("Animation Values")]
     public PlayerStates playerStates = PlayerStates.Idle;
     [SerializeField] private float idleAnimSpeed = 1f;
     [SerializeField] private float runAnimSpeed = 1f;
@@ -34,8 +34,7 @@ public class ControlPlayer : MonoBehaviour
     private PlayerAttack playerAttack;
     private HealthAndPosture healthAndPosture;
     private bool wasOnGround = false;
-
-    AudioManager audioManager;
+    private AudioManager audioManager;
 
     private void Awake()
     {
@@ -50,9 +49,11 @@ public class ControlPlayer : MonoBehaviour
 
     void Update()
     {
+        // Get player inputs
         horizontalAxis = Input.GetAxisRaw("Horizontal");
         jumpKey = Input.GetKeyDown(KeyCode.W);
 
+        // Flip the player based on direction
         if (horizontalAxis < 0)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
@@ -62,37 +63,48 @@ public class ControlPlayer : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
+        // Handle jump
         if (onGround && jumpKey)
         {
             rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+            audioManager.PlaySFX("jump");
         }
     }
 
     private void FixedUpdate()
     {
+        // Update velocity for horizontal movement
         rb.velocity = new Vector2(horizontalAxis * moveSpeed, rb.velocity.y);
         onGround = groundDetector.IsTouchingLayers(LayerMask.GetMask("Ground"));
 
-        // Sound Effects
+        // Sound effects
+        HandleSoundEffects();
+
+        // Check if player is grounded
+        wasOnGround = onGround;
+
+        // Update player states
+        UpdatePlayerState();
+    }
+
+    private void HandleSoundEffects()
+    {
         if (!wasOnGround && onGround)
         {
-            audioManager.PlaySFX("land"); // Use string "land"
+            audioManager.PlaySFX("land");
         }
-        else if (onGround && jumpKey)
+        else if (onGround && Mathf.Abs(rb.velocity.x) > Mathf.Epsilon)
         {
-            audioManager.PlaySFX("jump");
+            audioManager.PlaySFX("walk");
         }
         else if (!onGround && rb.velocity.y < 0)
         {
             audioManager.PlaySFX("fall");
         }
-        else if (onGround && Mathf.Abs(rb.velocity.x) > Mathf.Epsilon) // Walking
-        {
-            audioManager.PlaySFX("walk");
-        }
+    }
 
-        wasOnGround = onGround; // Update wasOnGround for next frame
-
+    private void UpdatePlayerState()
+    {
         if (HealthAndPosture.isPostureBroken)
         {
             playerStates = PlayerStates.BrokenPosture;
@@ -103,25 +115,21 @@ public class ControlPlayer : MonoBehaviour
             playerStates = PlayerStates.GotParried;
             ChangeAnimationState("GotParried", gotParriedAnimSpeed);
         }
-
         else if (HealthAndPosture.die)
         {
             playerStates = PlayerStates.Die;
             ChangeAnimationState("Die", dieAnimSpeed);
         }
-
         else if (HealthAndPosture.isStunned)
         {
             playerStates = PlayerStates.Stunned;
             ChangeAnimationState("Stunned", stunnedAnimSpeed);
         }
-
         else if (HealthAndPosture.takeDamage)
         {
             playerStates = PlayerStates.TakeDamage;
             ChangeAnimationState("TakeDamage", takeDamageAnimSpeed);
         }
-
         else if (playerAttack.blocking)
         {
             playerStates = PlayerStates.Blocking;
