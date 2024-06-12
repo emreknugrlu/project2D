@@ -446,11 +446,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9
+      value: -102.57
       objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.69
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1158,7 +1158,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0
+  near clip plane: -1
   far clip plane: 152
   field of view: 60
   orthographic: 1

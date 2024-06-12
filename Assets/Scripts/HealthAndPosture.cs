@@ -71,11 +71,6 @@ public class HealthAndPosture : MonoBehaviour
         takeDamage = true;
         StartCoroutine(DamageRecovery());
 
-        if (animator != null)
-        {
-            animator.SetTrigger("TakeDamage"); // Play damage animation
-        }
-
         if (health <= 0)
         {
             Die();

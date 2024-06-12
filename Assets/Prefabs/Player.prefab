@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8321721840440938008
 Transform:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2937079051603673735}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.186, y: -0.272, z: -0.2816035}
+  m_LocalPosition: {x: 0.092, y: -0.272, z: -0.2816035}
   m_LocalScale: {x: 0.44052866, y: 0.44052866, z: 0.44052866}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -466,6 +466,8 @@ MonoBehaviour:
   stunnedAnimSpeed: 1
   blockingAnimSpeed: 1
   gotParriedAnimSpeed: 1
+  dieAnimSpeed: 1
+  takeDamageAnimSpeed: 1
   rb: {fileID: 3192982138860410949}
   groundDetector: {fileID: 5593025840056013700}
   animator: {fileID: 1952806806933224191}
@@ -512,6 +514,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   posture: 0
+  parriedDuration: 0.2
+  damageDuration: 0.6
   freezeDuration: 3
   blocking: 0
   parrying: 0

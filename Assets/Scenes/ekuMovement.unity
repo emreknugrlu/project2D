@@ -2974,13 +2974,17 @@ PrefabInstance:
       propertyPath: freezeDuration
       value: 1.53
       objectReference: {fileID: 0}
+    - target: {fileID: 1740393447103925999, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
+      propertyPath: playerStates
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.z
