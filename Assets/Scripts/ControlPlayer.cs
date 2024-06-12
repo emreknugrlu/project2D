@@ -131,12 +131,9 @@ public class ControlPlayer : MonoBehaviour
         Run,
         Jump,
         Attack,
-<<<<<<< HEAD
         BrokenPosture,
         GotParried,
         Stunned,
         Blocking,
-=======
->>>>>>> parent of 7f9e7d0 (EnemyScript)
     }
 }
