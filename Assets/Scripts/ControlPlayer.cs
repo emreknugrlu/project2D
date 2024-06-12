@@ -7,6 +7,8 @@ public class ControlPlayer : MonoBehaviour
     float horizontalAxis = 0;
     private bool jumpKey = false;
     public bool onGround = false;
+    [SerializeField] private float walkSoundCooldown = 0.3f; // Adjust this value to control the interval
+    private float nextWalkSoundTime = 0f;
 
     [Header("Movement Values")]
     public float moveSpeed = 5.5f;
@@ -32,6 +34,7 @@ public class ControlPlayer : MonoBehaviour
     private PlayerAttack playerAttack;
     private HealthAndPosture healthAndPosture;
     private bool wasOnGround = false;
+    private bool isWalking;
 
     AudioManager audioManager;
 
@@ -74,7 +77,7 @@ public class ControlPlayer : MonoBehaviour
         // Sound Effects
         if (!wasOnGround && onGround)
         {
-            audioManager.PlaySFX("land"); // Use string "land"
+            audioManager.PlaySFX("land");
         }
         else if (onGround && jumpKey)
         {
@@ -84,9 +87,10 @@ public class ControlPlayer : MonoBehaviour
         {
             audioManager.PlaySFX("fall");
         }
-        else if (onGround && Mathf.Abs(rb.velocity.x) > Mathf.Epsilon) // Walking
+        else if (onGround && Mathf.Abs(rb.velocity.x) > Mathf.Epsilon && Time.time >= nextWalkSoundTime) // Walking
         {
             audioManager.PlaySFX("walk");
+            nextWalkSoundTime = Time.time + walkSoundCooldown;
         }
 
         wasOnGround = onGround; // Update wasOnGround for next frame
@@ -129,6 +133,11 @@ public class ControlPlayer : MonoBehaviour
             {
                 playerStates = PlayerStates.Run;
                 ChangeAnimationState("Run", runAnimSpeed);
+                if (isWalking)
+                {
+                    audioManager.PlaySFX("walk"); // Play walk SFX here
+                    isWalking = false;
+                }
             }
         }
         else

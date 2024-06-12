@@ -9,14 +9,12 @@ public class AudioManager : MonoBehaviour
     // Store audio clips directly in the script for better organization
     [Header("---------- Sound Effects ----------")]
     public AudioClip background;
-    public AudioClip death;
     public AudioClip checkpoint;
     public AudioClip attack;
     public AudioClip parry;
     public AudioClip jump;
     public AudioClip walk;
     public AudioClip block;
-    public AudioClip fall;
     public AudioClip land;
 
     private void Start()
@@ -41,9 +39,6 @@ public class AudioManager : MonoBehaviour
         // Switch statement to determine the AudioClip based on the soundName
         switch (soundName)
         {
-            case "death":
-                clipToPlay = death;
-                break;
             case "checkpoint":
                 clipToPlay = checkpoint;
                 break;
@@ -61,9 +56,6 @@ public class AudioManager : MonoBehaviour
                 break;
             case "block":
                 clipToPlay = block;
-                break;
-            case "fall":
-                clipToPlay = fall;
                 break;
             case "land":
                 clipToPlay = land;
