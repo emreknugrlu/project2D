@@ -3542,6 +3542,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6186635082749407314, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
+      propertyPath: audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 378713dc97333d84ba8afc280253d743, type: 2}
     - target: {fileID: 6316200094635624140, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
       value: -1.9243886
