@@ -28,6 +28,7 @@ public class SwordClash : MonoBehaviour
     void Start()
     {
         playerHp = player.GetComponent<HealthAndPosture>();
+        player.GetComponent<ControlPlayer>().StopPlayer();
         enemyHp = enemy.GetComponent<HealthAndPosture>();
         greenLength = greenArea.sizeDelta.x;
         midPosition = greenArea.position;
@@ -80,12 +81,14 @@ public class SwordClash : MonoBehaviour
             enemy.GetComponent<Animator>().Play("Crouch");
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kazandın");
+            player.GetComponent<ControlPlayer>().enabled = true;
         }
         else
         {
             if (currentDistance < 0)
             {
                 playerHp.die = true;
+                player.GetComponent<ControlPlayer>().ChangeAnimationState("Die",1);
             }
             else
             {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8321721840440938008}
   - component: {fileID: 6316200094635624140}
   - component: {fileID: 7885428633523625835}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,6 +483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b802059748eecb42a1eed9a7f3a74d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioMixer: {fileID: 24100000, guid: 378713dc97333d84ba8afc280253d743, type: 2}
 --- !u!114 &9100726896887813301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -517,5 +518,10 @@ MonoBehaviour:
   parriedDuration: 0.2
   damageDuration: 0.6
   freezeDuration: 3
+  isPostureBroken: 0
+  isStunned: 0
+  gotParried: 0
+  die: 0
+  takeDamage: 0
   blocking: 0
   parrying: 0
