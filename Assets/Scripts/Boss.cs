@@ -55,11 +55,11 @@ public class Boss : MonoBehaviour
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-            if (distanceToPlayer <= attackRange)
+            /*if (distanceToPlayer <= attackRange)
             {
                 StartRandomAttack();
             }
-            else if (distanceToPlayer <= detectionRange)
+            else*/ if (distanceToPlayer <= detectionRange)
             {
                 ChasePlayer();
             }
