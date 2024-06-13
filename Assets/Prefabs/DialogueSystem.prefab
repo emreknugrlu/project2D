@@ -423,6 +423,7 @@ MonoBehaviour:
   dialogueText: {fileID: 4361767660994014344}
   boxAnimator: {fileID: 8818126300611872390}
   portraitAnimator: {fileID: 3948611847957737791}
+  letterSpeed: 10
 --- !u!222 &3458185030733122709
 CanvasRenderer:
   m_ObjectHideFlags: 0

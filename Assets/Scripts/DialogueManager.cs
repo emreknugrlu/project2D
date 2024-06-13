@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour {
 	private GameObject player;
 
 	private Queue<string> sentences;
+	[SerializeField]private float letterSpeed=1f;
 
 	// Use this for initialization
 	void Start () {
@@ -71,7 +72,12 @@ public class DialogueManager : MonoBehaviour {
 		foreach (char letter in sentence)
 		{
 			dialogueText.SetText(dialogueText.text + letter);
-			yield return null;
+			yield return new WaitForSeconds(0.4f/(Mathf.Abs(letterSpeed) + Mathf.Epsilon));
+			/*
+			 *
+			 *	Serhat için, harf ses efekti kodu buraya yazýlacak
+			 * 
+			 */
 		}
 	}
 
