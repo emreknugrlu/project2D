@@ -10,7 +10,6 @@ public class AudioManager : MonoBehaviour
     [Header("---------- Sound Effects ----------")]
     public AudioClip background;
     public AudioClip death;
-    public AudioClip checkpoint;
     public AudioClip attack;
     public AudioClip jump;
     public AudioClip walk;
@@ -41,9 +40,6 @@ public class AudioManager : MonoBehaviour
         {
             case "death":
                 clipToPlay = death;
-                break;
-            case "checkpoint":
-                clipToPlay = checkpoint;
                 break;
             case "attack":
                 clipToPlay = attack;

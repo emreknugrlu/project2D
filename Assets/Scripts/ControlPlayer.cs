@@ -16,6 +16,7 @@ public class ControlPlayer : MonoBehaviour
     private float nextWalkSoundTime = 0f;
     private bool hasAttacked = false;  // Flag to track if attack sound has played
     private bool hasBlocked = false;   // Flag to track if block sound has played
+    private bool hasJumped = false;
 
     [Header("Animation values")]
     public PlayerStates playerStates = PlayerStates.Idle;
@@ -62,9 +63,15 @@ public class ControlPlayer : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
-        if (onGround && jumpKey)
+        if (onGround && jumpKey && !hasJumped) // Check if onGround before jumping
         {
+            hasJumped = true;
             rb.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+            audioManager.PlaySFX("jump");
+        }
+        else if (onGround)
+        {
+            hasJumped = false;
         }
     }
 
@@ -160,14 +167,10 @@ public class ControlPlayer : MonoBehaviour
                 hasBlocked = false;
                 break;
         }
-                // Sound Effects Logic with Cooldown
+        // Sound Effects Logic with Cooldown
         if (onGround && jumpKey)
         {
             audioManager.PlaySFX("jump");
-        }
-        else if (!onGround && rb.velocity.y < 0)
-        {
-            audioManager.PlaySFX("fall");
         }
         // Walk Sound (only if enough time has passed)
         else if (onGround && Mathf.Abs(rb.velocity.x) > Mathf.Epsilon && Time.time >= nextWalkSoundTime)
