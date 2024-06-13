@@ -27,6 +27,7 @@ public class Boss : MonoBehaviour
     private BossStates bossState = BossStates.Idle;
     private string currentState;
     private HealthAndPosture healthAndPosture;
+    [SerializeField] private GameObject swordClash;
 
     void Start()
     {
@@ -49,17 +50,24 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
+        if (healthAndPosture.die)
+        {
+            ChangeAnimationState("WindUp", windupAnimSpeed);
+            swordClash.SetActive(true);
+            this.enabled = false;
+            return;
+        }
         if (isAttacking) return;
 
         if (player != null)
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-            /*if (distanceToPlayer <= attackRange)
+            if (distanceToPlayer <= attackRange)
             {
                 StartRandomAttack();
             }
-            else*/ if (distanceToPlayer <= detectionRange)
+            else if (distanceToPlayer <= detectionRange)
             {
                 ChasePlayer();
             }
@@ -72,10 +80,6 @@ public class Boss : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (healthAndPosture.die)
-        {
-            ChangeAnimationState("Die", dieAnimSpeed);
-        }
         if (healthAndPosture.takeDamage)
         {
             ChangeAnimationState("TakeDamage", takeDamageAnimSpeed);

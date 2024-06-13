@@ -15,7 +15,10 @@ public class SwordClash : MonoBehaviour
     [SerializeField] private RectTransform sword;
     [SerializeField] private RectTransform greenArea;
     [SerializeField] public Slider slider;
-    
+    [SerializeField] public GameObject player;
+    [SerializeField] public GameObject enemy;
+    private HealthAndPosture playerHp;
+    private HealthAndPosture enemyHp;
     
     
     private Vector2 midPosition;
@@ -24,6 +27,8 @@ public class SwordClash : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        playerHp = player.GetComponent<HealthAndPosture>();
+        enemyHp = enemy.GetComponent<HealthAndPosture>();
         greenLength = greenArea.sizeDelta.x;
         midPosition = greenArea.position;
     }
@@ -72,11 +77,21 @@ public class SwordClash : MonoBehaviour
     {
         if (win)
         {
+            enemy.GetComponent<Animator>().Play("Crouch");
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kazandın");
         }
         else
         {
+            if (currentDistance < 0)
+            {
+                playerHp.die = true;
+            }
+            else
+            {
+                enemyHp.die = true;
+                enemy.GetComponent<Animator>().Play("Die");
+            }
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kaybettin");
         }
