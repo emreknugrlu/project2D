@@ -65,30 +65,30 @@ public class ControlPlayer : MonoBehaviour
         rb.velocity = new Vector2(horizontalAxis * moveSpeed, rb.velocity.y);
         onGround = groundDetector.IsTouchingLayers(LayerMask.GetMask("Ground"));
 
-        if (HealthAndPosture.isPostureBroken)
+        if (healthAndPosture.isPostureBroken)
         {
             playerStates = PlayerStates.BrokenPosture;
             ChangeAnimationState("BrokenPosture", brokenPostureAnimSpeed);
         }
-        else if (HealthAndPosture.gotParried)
+        else if (healthAndPosture.gotParried)
         {
             playerStates = PlayerStates.GotParried;
             ChangeAnimationState("GotParried", gotParriedAnimSpeed);
         }
 
-        else if (HealthAndPosture.die)
+        else if (healthAndPosture.die)
         {
             playerStates = PlayerStates.Die;
             ChangeAnimationState("Die", dieAnimSpeed);
         }
 
-        else if (HealthAndPosture.isStunned)
+        else if (healthAndPosture.isStunned)
         {
             playerStates = PlayerStates.Stunned;
             ChangeAnimationState("Stunned", stunnedAnimSpeed);
         }
 
-        else if (HealthAndPosture.takeDamage)
+        else if (healthAndPosture.takeDamage)
         {
             playerStates = PlayerStates.TakeDamage;
             ChangeAnimationState("TakeDamage", takeDamageAnimSpeed);
