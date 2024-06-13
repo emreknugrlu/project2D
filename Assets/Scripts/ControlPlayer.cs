@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class ControlPlayer : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class ControlPlayer : MonoBehaviour
     [Header("Movement Values")]
     public float moveSpeed = 5.5f;
     public float jumpSpeed = 8.25f;
+    private float walkSoundCooldown = 0.3f;
+    private float nextWalkSoundTime = 0f;
+    private bool hasAttacked = false;  // Flag to track if attack sound has played
+    private bool hasBlocked = false;   // Flag to track if block sound has played
 
     [Header("Animation values")]
     public PlayerStates playerStates = PlayerStates.Idle;
@@ -30,6 +35,8 @@ public class ControlPlayer : MonoBehaviour
     public Rigidbody2D rb;
     public BoxCollider2D groundDetector;
     public Animator animator;
+    private AudioManager audioManager;
+    public AudioMixer audioMixer;
 
     private PlayerAttack playerAttack;
     private HealthAndPosture healthAndPosture;
@@ -38,6 +45,7 @@ public class ControlPlayer : MonoBehaviour
     {
         playerAttack = GetComponent<PlayerAttack>();
         healthAndPosture = GetComponent<HealthAndPosture>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     void Update()
@@ -128,6 +136,44 @@ public class ControlPlayer : MonoBehaviour
             {
                 ChangeAnimationState("Fall", fallAnimSpeed);
             }
+        }
+        // SFX for Specific States (with checks to play once per action)
+        switch (playerStates)
+        {
+            case PlayerStates.Blocking:
+                if (!hasBlocked)
+                {
+                    audioManager.PlaySFX("block", 0.1f);
+                    hasBlocked = true;
+                }
+                break;
+            case PlayerStates.Attack:
+                if (!hasAttacked)
+                {
+                    audioManager.PlaySFX("attack", 0.1f);
+                    hasAttacked = true;
+                }
+                break;
+            case PlayerStates.Idle: // Reset flags when transitioning to Idle
+            case PlayerStates.Run:
+                hasAttacked = false;
+                hasBlocked = false;
+                break;
+        }
+                // Sound Effects Logic with Cooldown
+        if (onGround && jumpKey)
+        {
+            audioManager.PlaySFX("jump");
+        }
+        else if (!onGround && rb.velocity.y < 0)
+        {
+            audioManager.PlaySFX("fall");
+        }
+        // Walk Sound (only if enough time has passed)
+        else if (onGround && Mathf.Abs(rb.velocity.x) > Mathf.Epsilon && Time.time >= nextWalkSoundTime)
+        {
+            audioManager.PlaySFX("walk");
+            nextWalkSoundTime = Time.time + walkSoundCooldown;
         }
     }
 

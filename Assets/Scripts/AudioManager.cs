@@ -12,12 +12,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip death;
     public AudioClip checkpoint;
     public AudioClip attack;
-    public AudioClip parry;
     public AudioClip jump;
     public AudioClip walk;
     public AudioClip block;
-    public AudioClip fall;
-    public AudioClip land;
     public AudioClip respawn;
 
     private void Start()
@@ -51,9 +48,6 @@ public class AudioManager : MonoBehaviour
             case "attack":
                 clipToPlay = attack;
                 break;
-            case "parry":
-                clipToPlay = parry;
-                break;
             case "jump":
                 clipToPlay = jump;
                 break;
@@ -62,12 +56,6 @@ public class AudioManager : MonoBehaviour
                 break;
             case "block":
                 clipToPlay = block;
-                break;
-            case "fall":
-                clipToPlay = fall;
-                break;
-            case "land":
-                clipToPlay = land;
                 break;
             case "respawn":
                 clipToPlay = respawn;

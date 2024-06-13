@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class HealthAndPosture : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class HealthAndPosture : MonoBehaviour
 
     private Rigidbody2D rb2D; 
     private Animator animator; // Animator component
+    private AudioManager audioManager;
+    public AudioMixer audioMixer;
 
     [Header("State Settings")]
     public bool blocking = false;
@@ -34,6 +37,7 @@ public class HealthAndPosture : MonoBehaviour
         {
             Debug.LogError("Animator component is missing!");
         }
+        audioManager = FindObjectOfType<AudioManager>(); // Get reference to AudioManager
     }
 
     void Update()
@@ -190,6 +194,12 @@ public class HealthAndPosture : MonoBehaviour
     {
         Debug.Log("I am Dead!");
         die = true;
+
+        // Play the death sound effect
+        if (audioManager != null)
+        {
+            audioManager.PlaySFX("death", 0.1f);
+        }
 
         // Find the PlayerRespawn component and trigger respawn
         PlayerRespawn playerRespawn = GetComponent<PlayerRespawn>();
