@@ -33,6 +33,7 @@ public class ControlPlayer : MonoBehaviour
     [SerializeField] private float takeDamageAnimSpeed = 1f;
 
     [Header("Components")]
+    private GameObject HP;
     public Rigidbody2D rb;
     public BoxCollider2D groundDetector;
     public Animator animator;
@@ -44,6 +45,7 @@ public class ControlPlayer : MonoBehaviour
 
     private void Start()
     {
+        HP = transform.GetChild(3).gameObject;
         playerAttack = GetComponent<PlayerAttack>();
         healthAndPosture = GetComponent<HealthAndPosture>();
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
@@ -57,10 +59,12 @@ public class ControlPlayer : MonoBehaviour
         if (horizontalAxis < 0)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            HP.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
         else if (horizontalAxis > 0)
         {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            HP.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         }
 
         if (onGround && jumpKey && !hasJumped) // Check if onGround before jumping

@@ -5096,11 +5096,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 36.4
+      value: -7.93
       objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.58
+      value: 1.14
       objectReference: {fileID: 0}
     - target: {fileID: 5891693623233976497, guid: 55327a178951ad94aaf1f5e8707a5cd4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5877,6 +5877,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  healthBar: {fileID: 0}
+  postureBar: {fileID: 0}
   posture: 0
   parriedDuration: 0.2
   damageDuration: 0.6
@@ -5886,6 +5888,7 @@ MonoBehaviour:
   gotParried: 0
   die: 0
   takeDamage: 0
+  audioMixer: {fileID: 0}
   blocking: 0
   parrying: 0
 --- !u!114 &1431711022
