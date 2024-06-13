@@ -191,7 +191,22 @@ public class HealthAndPosture : MonoBehaviour
         Debug.Log("I am Dead!");
         die = true;
 
-        Destroy(gameObject, 2.0f); // Delay to allow death animation
+        // Find the PlayerRespawn component and trigger respawn
+        PlayerRespawn playerRespawn = GetComponent<PlayerRespawn>();
+        if (playerRespawn != null)
+        {
+            playerRespawn.Respawn();
+        }
+        else
+        {
+            Debug.LogWarning("PlayerRespawn component not found!");
+        }
+    }
+    public void ResetHealthAndPosture()
+    {
+        health = 100; 
+        posture = 0; 
+        die = false; 
     }
 
     // Method to check if the player is blocking or parrying
