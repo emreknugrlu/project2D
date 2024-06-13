@@ -18,6 +18,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip block;
     public AudioClip fall;
     public AudioClip land;
+    public AudioClip respawn;
 
     private void Start()
     {
@@ -67,6 +68,9 @@ public class AudioManager : MonoBehaviour
                 break;
             case "land":
                 clipToPlay = land;
+                break;
+            case "respawn":
+                clipToPlay = respawn;
                 break;
             default:
                 Debug.LogWarning("Sound effect not found: " + soundName);

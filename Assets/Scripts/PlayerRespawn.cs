@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerRespawn : MonoBehaviour
 {
     private Transform latestCheckpoint;
     private HealthAndPosture healthAndPosture; // Reference to HealthAndPosture script
     private Animator animator;  // Reference to Animator component
+    private AudioManager audioManager;
+    public AudioMixer audioMixer;
 
     void Start()
     {
@@ -12,6 +15,7 @@ public class PlayerRespawn : MonoBehaviour
         latestCheckpoint = transform;
         healthAndPosture = GetComponent<HealthAndPosture>();  // Get references to scripts
         animator = GetComponent<Animator>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Method to set a new checkpoint
@@ -24,6 +28,7 @@ public class PlayerRespawn : MonoBehaviour
     // Method to respawn the player at the latest checkpoint
     public void Respawn()
     {
+        audioMixer.SetFloat("RespawnSFXVolume", -10f);
         if (latestCheckpoint != null)
         {
             Rigidbody2D rb = transform.GetComponent<Rigidbody2D>();
@@ -37,7 +42,12 @@ public class PlayerRespawn : MonoBehaviour
             }
             if (animator != null)
             {
-                animator.Play("Idle"); // Replace "Idle" with your actual idle state name
+                animator.Play("Idle");
+            }
+
+            if (audioManager != null)
+            {
+                audioManager.PlaySFX("respawn");
             }
         }
         else
