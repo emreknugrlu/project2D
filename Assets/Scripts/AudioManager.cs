@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySFX(string soundName)
+    public void PlaySFX(string soundName, float volumeScale = 1.0f)
     {
         AudioClip clipToPlay = null;
 
@@ -80,7 +80,7 @@ public class AudioManager : MonoBehaviour
         // Play the AudioClip if found
         if (clipToPlay != null && SFXSource != null)
         {
-            SFXSource.PlayOneShot(clipToPlay);
+            SFXSource.PlayOneShot(clipToPlay, volumeScale);
         }
         else
         {

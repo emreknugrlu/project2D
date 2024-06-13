@@ -28,7 +28,6 @@ public class PlayerRespawn : MonoBehaviour
     // Method to respawn the player at the latest checkpoint
     public void Respawn()
     {
-        audioMixer.SetFloat("RespawnSFXVolume", -100f);
         if (latestCheckpoint != null)
         {
             Rigidbody2D rb = transform.GetComponent<Rigidbody2D>();
@@ -47,7 +46,7 @@ public class PlayerRespawn : MonoBehaviour
 
             if (audioManager != null)
             {
-                audioManager.PlaySFX("respawn");
+                audioManager.PlaySFX("respawn", 0.1f);
             }
         }
         else
