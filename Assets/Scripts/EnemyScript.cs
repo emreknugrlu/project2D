@@ -28,11 +28,15 @@ public class EnemyScript : MonoBehaviour
 
     // Private Variables
     [SerializeField] private Animator animator;
+    [SerializeField] private float timeToAttack = 0.65f;
     private Rigidbody2D rb;
     private Transform currentPoint;
+    private GameObject attackArea;
     private bool playerInPatrolArea = false;
     private bool isChasingPlayer = false;
     public float attackDistance = 2.0f; // Distance at which the enemy attacks
+    public bool attacking = false;
+    private float attackTimer = 0f;
     private string currentState = IDLE;
 
     // Animation State Constants
@@ -48,6 +52,8 @@ public class EnemyScript : MonoBehaviour
         animator = GetComponent<Animator>();
         currentPoint = pointB.transform;
         ChangeAnimationState(IDLE);
+        attackArea = transform.GetChild(0).gameObject;
+        attackArea.SetActive(false); // Ensure the attack area is initially inactive
     }
 
     void Update()
@@ -63,6 +69,7 @@ public class EnemyScript : MonoBehaviour
             rb.velocity = Vector2.zero;
             ChangeAnimationState(ATTACK, attackAnimSpeed);
             FlipTowards(player.transform.position);
+            Attack();
         }
         else if (shouldChase)
         {
@@ -89,6 +96,17 @@ public class EnemyScript : MonoBehaviour
             // Walk while patrolling
             ChangeAnimationState(WALK, walkAnimSpeed);
         }
+
+        // Handle the attacking state
+        if (attacking)
+        {
+            attackTimer += Time.deltaTime;
+
+            if (attackTimer >= timeToAttack)
+            {
+                EndAttack();
+            }
+        }
     }
 
     // Function to flip the sprite horizontally based on target position
@@ -100,6 +118,25 @@ public class EnemyScript : MonoBehaviour
             localScale.x *= -1;
             transform.localScale = localScale;
         }
+    }
+    public void Attack()
+    {
+        if (!attacking)
+        {
+            attacking = true;
+            attackArea.SetActive(true); // Activate the attack area
+
+            // Reset timers
+            attackTimer = 0f;
+        }
+    }
+    private void EndAttack()
+    {
+        attacking = false;
+        attackArea.SetActive(false); // Deactivate the attack area
+
+        // Reset attack timer
+        attackTimer = 0f;
     }
 
     // Function to check if the player is within the patrol area
