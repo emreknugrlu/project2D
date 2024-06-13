@@ -97,6 +97,7 @@ public class SwordClash : MonoBehaviour
             }
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kaybettin");
+            playerHp.die = true;
         }
     }
 }
