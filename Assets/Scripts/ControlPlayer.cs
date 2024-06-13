@@ -186,6 +186,15 @@ public class ControlPlayer : MonoBehaviour
         animator.speed = animSpeed;
         currentState = newState;
     }
+    
+    public void StopPlayer()
+    {
+        rb.velocity = Vector2.zero;
+        horizontalAxis = 0;
+        playerStates = PlayerStates.Idle;
+        ChangeAnimationState("Idle", idleAnimSpeed);
+        this.enabled = false;
+    }
 
     public enum PlayerStates
     {

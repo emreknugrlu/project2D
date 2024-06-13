@@ -88,7 +88,7 @@ public class Boss : MonoBehaviour
 
     IEnumerator BossBehavior()
     {
-        while (true) // Infinite loop for continuous behavior
+        while (!healthAndPosture.die) // Infinite loop for continuous behavior
         {
             if (!isAttacking)
             {
