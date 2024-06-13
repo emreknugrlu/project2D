@@ -1,11 +1,15 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class HealthAndPosture : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     private int MAX_HEALTH = 100;
+
+    public Image healthBar;
+    public Image postureBar;
 
     [Header("Posture Settings")]
     [SerializeField] private int posture = 0;
@@ -56,6 +60,9 @@ public class HealthAndPosture : MonoBehaviour
         {
             TakePostureDamage(20);
         }
+
+        healthBar.fillAmount = health / 100f;
+        postureBar.fillAmount = posture / 100f;
     }
 
     public void Damage(int amount)
@@ -214,8 +221,9 @@ public class HealthAndPosture : MonoBehaviour
     }
     public void ResetHealthAndPosture()
     {
-        health = 100; 
-        posture = 0; 
+        health = 100;
+        posture = 0;
+
         die = false; 
     }
 
