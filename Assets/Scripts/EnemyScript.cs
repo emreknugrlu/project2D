@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using static ControlPlayer;
 
@@ -10,25 +11,28 @@ public class EnemyScript : MonoBehaviour
     public float speed = 2f; // Movement speed
     public float upperYAxisTolerance = 4.0f; // Vertical tolerance for player detection
     public float lowerYAxisTolerance = 0.5f; // Vertical tolerance for player detection
+    public float windupDuration = 1f; // Duration of windup before each attack
 
     public enum EnemyStates
     {
         Idle,
+        Windup,
         Walk,
         Run,
         Attack,
         Death,
     }
     public EnemyStates enemyStates = EnemyStates.Idle;
-    [SerializeField] float idleAnimSpeed = 1f;
     [SerializeField] float runAnimSpeed = 1.5f;
-    [SerializeField] float jumpAnimSpeed = 1f;
     [SerializeField] float walkAnimSpeed = 1f;
     [SerializeField] float attackAnimSpeed = 1f;
+    [SerializeField] float windupAnimSpeed = 1f;
+
 
     // Private Variables
     [SerializeField] private Animator animator;
     [SerializeField] private float timeToAttack = 0.65f;
+    [SerializeField] private float attackInteval = 1f;
     private Rigidbody2D rb;
     private Transform currentPoint;
     private GameObject attackArea;
@@ -36,7 +40,9 @@ public class EnemyScript : MonoBehaviour
     private bool isChasingPlayer = false;
     public float attackDistance = 2.0f; // Distance at which the enemy attacks
     public bool attacking = false;
+    private bool canAttack = true;
     private float attackTimer = 0f;
+    private float waitingToAttack = 0f;
     private string currentState = IDLE;
 
     // Animation State Constants
@@ -45,7 +51,24 @@ public class EnemyScript : MonoBehaviour
     public const string RUN = "Run";
     public const string Death = "Death";
     public const string ATTACK = "Attack";
+    public const string WINDUP = "Windup";
 
+    
+    IEnumerator DoAttackAfterWindup()
+    {
+        yield return new WaitForSeconds(windupDuration);
+        enemyStates = EnemyStates.Attack;
+        ChangeAnimationState(ATTACK, attackAnimSpeed);
+        Attack();
+    }
+    IEnumerator StartWindup()
+    {
+        enemyStates = EnemyStates.Windup;
+        ChangeAnimationState(WINDUP, windupAnimSpeed);
+        StartCoroutine(DoAttackAfterWindup());
+        yield return null;
+    }
+    
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -67,9 +90,9 @@ public class EnemyScript : MonoBehaviour
         {
             // Stop movement and attack
             rb.velocity = Vector2.zero;
-            ChangeAnimationState(ATTACK, attackAnimSpeed);
             FlipTowards(player.transform.position);
-            Attack();
+            if (canAttack)
+                StartCoroutine(StartWindup());
         }
         else if (shouldChase)
         {
@@ -77,6 +100,7 @@ public class EnemyScript : MonoBehaviour
             isChasingPlayer = true;
             float direction = Mathf.Sign(player.transform.position.x - transform.position.x);
             rb.velocity = new Vector2(direction * speed, rb.velocity.y);
+            enemyStates = EnemyStates.Run;
             ChangeAnimationState(RUN, runAnimSpeed);
             FlipTowards(player.transform.position);
         }
@@ -94,6 +118,7 @@ public class EnemyScript : MonoBehaviour
             }
 
             // Walk while patrolling
+            enemyStates = EnemyStates.Walk;
             ChangeAnimationState(WALK, walkAnimSpeed);
         }
 
@@ -105,6 +130,14 @@ public class EnemyScript : MonoBehaviour
             if (attackTimer >= timeToAttack)
             {
                 EndAttack();
+            }
+        }else
+        {
+            waitingToAttack += Time.deltaTime;
+            
+            if (waitingToAttack >= attackInteval)
+            {
+                canAttack = true;
             }
         }
     }
@@ -124,6 +157,7 @@ public class EnemyScript : MonoBehaviour
         if (!attacking)
         {
             attacking = true;
+            canAttack = false;
             attackArea.SetActive(true); // Activate the attack area
 
             // Reset timers
@@ -134,9 +168,13 @@ public class EnemyScript : MonoBehaviour
     {
         attacking = false;
         attackArea.SetActive(false); // Deactivate the attack area
+        enemyStates = EnemyStates.Idle;
+        ChangeAnimationState(IDLE);
 
-        // Reset attack timer
+        // Reset attack attributes
         attackTimer = 0f;
+        waitingToAttack = 0f;
+        canAttack = false;
     }
 
     // Function to check if the player is within the patrol area

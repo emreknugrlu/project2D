@@ -26,9 +26,11 @@ public class Boss : MonoBehaviour
 
     private BossStates bossState = BossStates.Idle;
     private string currentState;
+    private HealthAndPosture healthAndPosture;
 
     void Start()
     {
+        healthAndPosture = GetComponent<HealthAndPosture>();
         attackArea = transform.GetChild(0).gameObject;
         attackArea.SetActive(false); // Ensure the attack area is initially inactive
 
@@ -53,11 +55,11 @@ public class Boss : MonoBehaviour
         {
             float distanceToPlayer = Vector2.Distance(transform.position, player.position);
 
-            if (distanceToPlayer <= attackRange)
+            /*if (distanceToPlayer <= attackRange)
             {
                 StartRandomAttack();
             }
-            else if (distanceToPlayer <= detectionRange)
+            else*/ if (distanceToPlayer <= detectionRange)
             {
                 ChasePlayer();
             }
@@ -70,11 +72,11 @@ public class Boss : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (HealthAndPosture.die)
+        if (healthAndPosture.die)
         {
             ChangeAnimationState("Die", dieAnimSpeed);
         }
-        if (HealthAndPosture.takeDamage)
+        if (healthAndPosture.takeDamage)
         {
             ChangeAnimationState("TakeDamage", takeDamageAnimSpeed);
         }
