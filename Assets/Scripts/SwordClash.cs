@@ -98,7 +98,7 @@ public class SwordClash : MonoBehaviour
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kaybettin");
             player.GetComponent<ControlPlayer>().ChangeAnimationState("Die",0.6f);
-            
+            StartCoroutine(NewSceneLoader.YouLostScene());
         }
     }
 }

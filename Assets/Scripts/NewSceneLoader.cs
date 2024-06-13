@@ -17,4 +17,9 @@ public class NewSceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
+    public static IEnumerator YouLostScene()
+    {
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("Scenes/YouLost");
+    }
 }
