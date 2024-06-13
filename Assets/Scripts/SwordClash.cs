@@ -81,7 +81,7 @@ public class SwordClash : MonoBehaviour
             enemy.GetComponent<Animator>().Play("Crouch");
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kazandın");
-            player.GetComponent<ControlPlayer>().enabled = true;
+            GetComponent<DialogueTrigger>().TriggerDialogue();
         }
         else
         {

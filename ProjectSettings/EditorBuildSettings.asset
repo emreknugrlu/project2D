@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingScene.unity
     guid: 8546c22c326aebf4bb2a24d854d6f6a5
+  - enabled: 1
+    path: Assets/Scenes/YouLost.unity
+    guid: 590368c47e7103a4b9ee786fde3dd933
   m_configObjects: {}
