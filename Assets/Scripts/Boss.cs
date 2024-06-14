@@ -54,7 +54,7 @@ public class Boss : MonoBehaviour
         {
             ChangeAnimationState("WindUp", windupAnimSpeed);
             swordClash.SetActive(true);
-            this.enabled = false;
+            Destroy(this);
             return;
         }
         if (isAttacking) return;

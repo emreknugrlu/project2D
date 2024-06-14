@@ -91,8 +91,10 @@ public class EnemyScript : MonoBehaviour
         if (healthAndPosture.die)
         {
             ChangeAnimationState(Death);
-            Destroy(transform.GetChild(0));
-            DestroyImmediate(this);
+            Destroy(transform.GetChild(1).gameObject);
+            Destroy(transform.GetChild(0).gameObject);
+            Destroy(this);
+            return;
         }
         else if (shouldAttack)
         {

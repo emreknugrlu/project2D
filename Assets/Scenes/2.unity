@@ -7518,23 +7518,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1094058259227804129, guid: 33d580cd1b428ff46ad7350be0826363, type: 3}
   m_PrefabInstance: {fileID: 4181542886102631978}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3575715770566098479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3575715770566098474}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23dadc2bef9f8954390bcdefd5c65c59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Oppie
-    sentences:
-    - Ara ver, dinlen, Volvir.
-    - Sizi kurtarmaya gidiyorum!
 --- !u!4 &3962544463164448656
 Transform:
   m_ObjectHideFlags: 0
@@ -7650,13 +7633,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2082314404}
+    - target: {fileID: 7304449424569842347, guid: 33d580cd1b428ff46ad7350be0826363, type: 3}
+      propertyPath: clashDifficulty
+      value: 8.59
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1094058259227804129, guid: 33d580cd1b428ff46ad7350be0826363, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3575715770566098479}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33d580cd1b428ff46ad7350be0826363, type: 3}
 --- !u!1 &4561319989164201929
 GameObject:

@@ -79,9 +79,10 @@ public class SwordClash : MonoBehaviour
         if (win)
         {
             enemy.GetComponent<Animator>().Play("Crouch");
+            GetComponent<DialogueTrigger>().TriggerDialogue();
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kazandın");
-            GetComponent<DialogueTrigger>().TriggerDialogue();
+            
         }
         else
         {
@@ -89,16 +90,17 @@ public class SwordClash : MonoBehaviour
             {
                 playerHp.die = true;
                 player.GetComponent<ControlPlayer>().ChangeAnimationState("Die",1);
+                enemy.GetComponent<Animator>().Play("Idle");
             }
             else
             {
                 enemyHp.die = true;
                 enemy.GetComponent<Animator>().Play("Die");
             }
+            StartCoroutine(NewSceneLoader.YouLostScene());
             gameObject.SetActive(false);
             Debug.Log("Oyunu Kaybettin");
             player.GetComponent<ControlPlayer>().ChangeAnimationState("Die",0.6f);
-            StartCoroutine(NewSceneLoader.YouLostScene());
         }
     }
 }
