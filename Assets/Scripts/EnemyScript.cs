@@ -90,11 +90,9 @@ public class EnemyScript : MonoBehaviour
 
         if (healthAndPosture.die)
         {
-            rb.velocity = Vector2.zero;
             ChangeAnimationState(Death);
-            this.enabled = false;
-            EndAttack();
-            return;
+            Destroy(transform.GetChild(0));
+            DestroyImmediate(this);
         }
         else if (shouldAttack)
         {
