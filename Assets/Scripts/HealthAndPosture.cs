@@ -17,13 +17,13 @@ public class HealthAndPosture : MonoBehaviour
     [SerializeField] private float damageDuration = 0.6f;
     [SerializeField] private float freezeDuration = 3.0f;// Duration to freeze the enemy
     private int MAX_POSTURE = 100;
-    public  bool isPostureBroken = false;
-    public  bool isStunned = false;
-    public  bool gotParried = false;
-    public  bool die = false;
-    public  bool takeDamage = false;
+    public bool isPostureBroken = false;
+    public bool isStunned = false;
+    public bool gotParried = false;
+    public bool die = false;
+    public bool takeDamage = false;
 
-    private Rigidbody2D rb2D; 
+    private Rigidbody2D rb2D;
     private Animator animator; // Animator component
     private AudioManager audioManager;
     public AudioMixer audioMixer;
@@ -224,7 +224,7 @@ public class HealthAndPosture : MonoBehaviour
         health = 100;
         posture = 0;
 
-        die = false; 
+        die = false;
     }
 
     // Method to check if the player is blocking or parrying

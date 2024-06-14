@@ -34,6 +34,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private float timeToAttack = 0.65f;
     [SerializeField] private float attackInteval = 1f;
     private Rigidbody2D rb;
+    private HealthAndPosture healthAndPosture;
     private Transform currentPoint;
     private GameObject attackArea;
     private bool playerInPatrolArea = false;
@@ -77,6 +78,7 @@ public class EnemyScript : MonoBehaviour
         ChangeAnimationState(IDLE);
         attackArea = transform.GetChild(0).gameObject;
         attackArea.SetActive(false); // Ensure the attack area is initially inactive
+        healthAndPosture = GetComponent<HealthAndPosture>();
     }
 
     void Update()
@@ -86,7 +88,15 @@ public class EnemyScript : MonoBehaviour
         bool shouldChase = playerInPatrolArea && distanceToPlayer <= 10f;
         bool shouldAttack = distanceToPlayer <= attackDistance; // New condition for attack
 
-        if (shouldAttack)
+        if (healthAndPosture.die)
+        {
+            rb.velocity = Vector2.zero;
+            ChangeAnimationState(Death);
+            this.enabled = false;
+            EndAttack();
+            return;
+        }
+        else if (shouldAttack)
         {
             // Stop movement and attack
             rb.velocity = Vector2.zero;
