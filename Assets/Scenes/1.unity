@@ -7270,6 +7270,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1546596738}
     - target: {fileID: 2360205608466383863, guid: d33e7603b42c037479197ea1077d5809, type: 3}
+      propertyPath: enemyStates
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2360205608466383863, guid: d33e7603b42c037479197ea1077d5809, type: 3}
       propertyPath: attackAnimSpeed
       value: 0.8
       objectReference: {fileID: 0}
