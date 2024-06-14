@@ -22,4 +22,9 @@ public class NewSceneLoader : MonoBehaviour
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene("Scenes/YouLost");
     }
+
+    public static void ToMainMenu()
+    {
+        SceneManager.LoadScene("Scenes/MainMenu");
+    }
 }
