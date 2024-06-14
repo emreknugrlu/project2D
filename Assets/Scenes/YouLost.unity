@@ -901,7 +901,7 @@ GameObject:
   - component: {fileID: 2006035839}
   - component: {fileID: 2006035838}
   m_Layer: 0
-  m_Name: THE END
+  m_Name: YOU LOST
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -948,7 +948,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e1490a4142ba7b945b6022fb832ea2ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 53b2351f40c8baa4cb13b5f02bb73a01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -968,8 +968,8 @@ Transform:
   m_GameObject: {fileID: 2006035837}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 50, y: -147, z: 0}
-  m_LocalScale: {x: 358.86, y: 358.86, z: 358.86}
+  m_LocalPosition: {x: 34, y: -145, z: 0}
+  m_LocalScale: {x: 301.36, y: 301.36, z: 301.36}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 341269590}
