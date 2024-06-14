@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -13,8 +14,10 @@ public class DialogueManager : MonoBehaviour {
 
 	public Animator boxAnimator;
 	public Animator portraitAnimator;
-	
-	private GameObject player;
+    private AudioManager audioManager;
+    public AudioMixer audioMixer;
+
+    private GameObject player;
 
 	private Queue<string> sentences;
 	[SerializeField]private float letterSpeed=1f;
@@ -23,7 +26,8 @@ public class DialogueManager : MonoBehaviour {
 	void Start () {
 		sentences = new Queue<string>();
 		player = GameObject.FindWithTag("Player");
-	}
+        audioManager = FindObjectOfType<AudioManager>();
+    }
 
 	private void Update()
 	{
@@ -68,17 +72,23 @@ public class DialogueManager : MonoBehaviour {
 
 	IEnumerator TypeSentence (string sentence)
 	{
+
 		dialogueText.SetText("");
-		foreach (char letter in sentence)
+        int letterCounter = 0; // Counter to track displayed letters
+        const int lettersPerSound = 3; // Play sound every 3 letters
+        foreach (char letter in sentence)
 		{
 			dialogueText.SetText(dialogueText.text + letter);
-			yield return new WaitForSeconds(0.4f/(Mathf.Abs(letterSpeed) + Mathf.Epsilon));
-			/*
-			 *
-			 *	Serhat için, harf ses efekti kodu buraya yazýlacak
-			 * 
-			 */
-		}
+            letterCounter++;
+
+            //Play the sound effect for each letter
+            if (letterCounter % lettersPerSound == 0 && audioManager != null)
+            {
+                audioManager.PlaySFX("button", 1f);
+            }
+
+            yield return new WaitForSeconds(0.4f/(Mathf.Abs(letterSpeed) + Mathf.Epsilon));
+        }
 	}
 
 	void EndDialogue()
