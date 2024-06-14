@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour {
             //Play the sound effect for each letter
             if (letterCounter % lettersPerSound == 0 && audioManager != null)
             {
-                audioManager.PlaySFX("button", 1f);
+                audioManager.PlaySFX("button", 0.2f);
             }
 
             yield return new WaitForSeconds(0.4f/(Mathf.Abs(letterSpeed) + Mathf.Epsilon));
